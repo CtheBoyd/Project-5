@@ -6,6 +6,9 @@
 
 def multiply(num_1, num_2):
     """Function multiplies two numbers through adding number 1, number 2 times."""
-    if num_2 == 0:
+    if (num_1<num_2):
+        return multiply(num_2, num_1)
+    elif(num_2!=0):
+        return (num_1 + multiply(num_1, num_2 - 1))
+    else:
         return 0
-    return num_1 + multiply(num_1, num_2 - 1)
